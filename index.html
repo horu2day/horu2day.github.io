@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All Rights!! 딱 조아!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h2 id="clock" class="clock" style="color: black" >00:00:00</h2>
+        <h3 id="today" style="color: black" ></h3>
+      </div>
+      <form class="hidden" id="loginForm">
+        <input
+          required
+          maxlength="30"
+          type="text"
+          placeholder="니 이름은 누구?"
+        />
+        <input type="submit" value="Log In" />
+      </form>
+      <h1 class="hidden" id="greeting"></h1>
+    </header>
+    <main>
+      <div class="main-div-out">
+        <div class="main-div-in ">
+          <form id="todo-form">
+            <input autocomplete="on" type="text" style="width:100%" placeholder="스스로에게 고마운 것, 잘한것 적고 엔터" required />
+          </form>
+        </div>
+      </div>
+      <div class="main-ul-out">
+        <div class="main-ul-in">
+          <ul id="todo-list"></ul>
+        </div>
+      </div>
+      <div id="quote" class="quote">
+        <span></span>
+        <span></span>
+      </div>
+      <button id="btnBefore">이전에 나는 어땟니?</button>
+      <div id="before-todos">
+        <ul id="before-todo-list"></ul>
+
+      </div>
+      
+      
+
+    </main>
+    <footer>
+      <div id ="weather">
+        <span></span>
+        <span></span>
+      </div>
+      <div>
+        <span>© 2022-2023 Kaosoft. All rights reserved.</span>
+      </div>
+      
+    </footer>
+    
+    <!-- <form id="inputForm" class="hidden">
+        <h1>Random Number Game</h1>
+        <h2>Generate a number between 0 and
+            <input id="input-number" pattern="[0-9]+" type="number" min="1" step="1" required >
+        </h2>
+        <h3>Guess the number:  
+            <input id="guess-number" pattern="[0-9]+" type="number" min="1" step="1" required >
+            <button>Play!</button>
+            </input>
+        </h3>
+    </form> -->
+    <!-- <div id="resDiv">
+        <h3 id="result"></h3>
+        <h2 id="bfwin"></h2>
+    </div> -->
+    <!-- <div>
+      <h1>Time Until Christmas Eve</h1>
+      <h2 id="clock">00:00</h2>
+    </div> -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2/moment.min.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/quotes.js"></script>
+    
+    <!-- <script src="js/weather.js"></script> -->
+  </body>
+</html>
+
