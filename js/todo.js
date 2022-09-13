@@ -26,6 +26,21 @@ function deleteToDo(event){
 }
 
 function paintToDo(newTodoObj){
+
+    const li =document.createElement("li");
+    li.id = newTodoObj.id;
+    const span = document.createElement("span");
+    span.innerText=newTodoObj.text;
+
+    const button = document.createElement("button");
+    button.innerText="⨉";
+    button.addEventListener("click", deleteToDo);
+    li.appendChild(span);
+    li.appendChild(button);
+    toDoList.appendChild(li);
+
+
+/*
     const li =document.createElement("li");
     li.id = newTodoObj.id;
     const span = document.createElement("span");
@@ -36,19 +51,20 @@ function paintToDo(newTodoObj){
     div.innerHTML="<div class='main-button-out'><div class='main-button-in'><button>⨉</button></div></div>"
     div.addEventListener("click", deleteToDo);
 
-    /*    button.innerText="⨉"
-        button.wrap( '<div class="main-button-out"><div class="main-button-in"></div></div>' );
-        button.innerHTML="<div class='test'>⨉</div>"*/
+    //   button.innerText="⨉"
+    //     button.wrap( '<div class="main-button-out"><div class="main-button-in"></div></div>' );
+    //     button.innerHTML="<div class='test'>⨉</div>"
+
 
         // button.innerText="X";
         // button.addEventListener("click", deleteToDo);
-
+        
          // button.innerText="X";
          // button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(div);
     toDoList.appendChild(li);
-    
+    */
 }
 
 function handleToDoSubmit(event){
