@@ -2,6 +2,7 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 const beforeList = document.getElementById("before-todo-list");
+const enterButton = document.getElementById("btnEnter");
 const beforeTodoBtn = document.getElementById("btnBefore");
 
 
@@ -34,7 +35,8 @@ function paintToDo(newTodoObj){
     span.innerText=newTodoObj.text;
 
     const button = document.createElement("button");
-    button.innerText="⨉";
+    
+    button.innerText="X";
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(button);
@@ -82,6 +84,7 @@ function handleToDoSubmit(event){
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+enterButton.addEventListener("click", handleToDoSubmit);
 
 console.log(TODOS_KEY);
 const savedToDos = localStorage.getItem(TODOS_KEY);
